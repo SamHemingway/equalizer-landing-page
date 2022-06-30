@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://www.frontendmentor.io/solutions/profile-card-component-TLIvKinbo8)
+- [Solution URL](https://www.frontendmentor.io/solutions/equalizer-landing-page-responsive-size-changes-GXv6KXlSUI)
 - [Live Site URL](https://sh-equalizer.netlify.app/)
 
 ## My process
