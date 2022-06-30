@@ -5,8 +5,10 @@ TABLE OF CONTENTS
 |1| VARIABLES
 |2| UTILITIES
 |3| BASIC ELEMENTS
-|4| COMPONENT A
-|5| MEDIA QUERIES
+|4| HEADER
+|5| MAIN
+|6| FOOTER
+|7| MEDIA QUERIES
 ==============================*/
 
 /*==============================
@@ -301,6 +303,9 @@ article {
   color: var(--clr-secondary);
 }
 
+/*==============================
+|7| MEDIA QUERIES
+==============================*/
 
 @media (max-width: 767px) {
   
