@@ -1,0 +1,45 @@
+/* Used for centring via the inline axis. Define a --content-inline-size globally in variables.css, then add exceptions in global.css. Fallback of 60ch for older browsers. */
+.center {
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: var(--content-size-inline), 60ch;
+}
+
+/* Used to add gaps between block level content. */
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Removes margin on block axis to prevent interference with padding provided by parent container. */
+.stack > * {
+  margin-block: 0;
+}
+
+/* Sets the gap for every child element except the first and final children to prevent double spacing. Define a --stack-gap globally in variables.css, then add exceptions in global.css. Fallback of 1.5rem for older browsers. */
+
+.stack > * + * {
+  margin-block-start: var(--stack-gap, 1.5rem);
+}
+
+/* Used to make a flex container to move to a vertically stacked format gracefully at smaller viewports. */
+
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Makes the switch to children stacked on each other via the block axis at 48rem. */
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((48rem - 100%) * 999);
+}
+
+/* Makes it so that no more than 2 children will rest on the inline axis. */
+
+.switcher > :nth-last-child(n + 3),
+.switcher > :nth-last-child(n + 3) ~ * {
+  flex-basis: 100%;
+}
