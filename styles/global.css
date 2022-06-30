@@ -293,6 +293,14 @@ article {
   padding-inline: clamp(0rem, -6.107vw + 2.931rem, 1.5rem);
 }
 
+.logo-footer {
+  align-self: start;
+}
+
+.footer-body {
+  max-inline-size: 22.875rem;
+}
+
 .footer-socials {
   display: flex;
   gap: 1.25rem;
