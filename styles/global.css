@@ -12,95 +12,16 @@ TABLE OF CONTENTS
 ==============================*/
 
 /*==============================
-|0| RESET
+|0| RESET - see styles/reset.css
 ==============================*/
-
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
 
 /*==============================
-|1| VARIABLES
+|1| VARIABLES - see styles/variables.css
 ==============================*/
-
-/* See styles/variables.css  */
 
 /*==============================
-|2| UTILITIES
+|2| UTILITIES - see /styles/utilities.css
 ==============================*/
-
-/* See /styles/utilities.css */
 
 /*==============================
 |3| BASIC ELEMENTS
@@ -109,28 +30,15 @@ select {
 body {
   font-family: var(--ff-primary);
   color: var(--clr-neutral-900);
-  background: 
-  url('../assets/bg-pattern-1.svg'), 
-  url('../assets/bg-oval-top-left.png'), 
-  url('../assets/bg-oval-top-right-1.png'), 
-  url('../assets/bg-oval-top-right-2.png'),
-  url('../assets/bg-oval-top-left.png');
-  background-position: 
-  top calc(-1 * (clamp(2rem, 1.19vw + 1.429rem, 2.5rem))) right calc(-1 * (clamp(0rem, -5.357vw + 4.821rem, 2.25rem))), 
-  top -10vw left -10rem, 
-  top 4.25rem right clamp(2.5rem, 17.262vw + -5.786rem, 9.75rem), 
-  top 18.1875rem right clamp(2.5rem, 17.262vw + -5.786rem, 9.75rem), 
-  bottom 11.625rem right -2rem;
+  background: url("../assets/bg-pattern-1.svg"), url("../assets/bg-oval-top-left.png"), url("../assets/bg-oval-top-right-1.png"),
+    url("../assets/bg-oval-top-right-2.png"), url("../assets/bg-oval-top-left.png");
+  background-position: top calc(-1 * (clamp(2rem, 1.19vw + 1.429rem, 2.5rem))) right calc(-1 * (clamp(0rem, -5.357vw + 4.821rem, 2.25rem))),
+    top -10vw left -10rem, top 4.25rem right clamp(2.5rem, 17.262vw + -5.786rem, 9.75rem), top 18.1875rem right clamp(2.5rem, 17.262vw + -5.786rem, 9.75rem),
+    bottom 11.625rem right -2rem;
   background-repeat: no-repeat;
-  background-size: 
-  clamp(9.375rem, 17.234vw + 3.989rem, 19.5rem), 
-  47rem, 
-  47rem, 
-  47rem,
-  47rem;
+  background-size: clamp(9.375rem, 17.234vw + 3.989rem, 19.5rem), 47rem, 47rem, 47rem, 47rem;
 }
 
-/* Needs to increase in size from 2.5rem to 5.5rem */
 h1 {
   font-size: clamp(2.5rem, 4.507vw + 1.444rem, 5.5rem);
   letter-spacing: -1px;
@@ -138,7 +46,7 @@ h1 {
 }
 
 .wrapper {
-  margin-inline: clamp(2.25rem, 19.196vw + -6.964rem, 10.313rem);
+  margin-inline: clamp(0rem, 15.493vw + -3.631rem, 10.313rem);
   margin-block-start: clamp(2.5rem, 2.066vw + 2.016rem, 3.875rem);
   margin-block-end: clamp(5rem, 0.939vw + 4.78rem, 5.625rem);
 }
@@ -159,7 +67,7 @@ a {
 }
 
 .logo {
-  max-width: 9.125rem;
+  inline-size: 9.125rem;
 }
 
 .header__title {
@@ -178,7 +86,7 @@ a {
 ==============================*/
 
 main {
-  background: url('../assets/bg-pattern-2.svg') var(--clr-neutral-900);
+  background: url("../assets/bg-pattern-2.svg") var(--clr-neutral-900);
   background-position: left clamp(14.313rem, 15.923vw + 6.67rem, 21rem) top -2rem;
   background-repeat: no-repeat;
   background-size: clamp(17.5rem, 4.762vw + 15.214rem, 19.5rem);
@@ -207,7 +115,6 @@ article {
   padding-inline: clamp(2.25rem, 72vw + -14.625rem, 3.375rem);
   padding-block: 3rem;
   position: absolute;
-  right: 0;
   top: clamp(5.625rem, -8.929vw + 13.661rem, 9.375rem);
   right: clamp(3.625rem, 3.936vw + 2.395rem, 5.938rem);
 }
@@ -228,22 +135,16 @@ article {
 }
 
 .card-body__callout {
- --stack-gap: 1.5rem;
- display: flex;
- align-items: center;
- gap: 1rem; 
- margin-block-end: 2.875rem;
- margin-block-start: 2.5rem;
-}
-
-.card-link {
-  text-decoration: none;
-  --stack-gap: 1rem;
-  cursor: pointer;
+  --stack-gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-block-end: 2.875rem;
+  margin-block-start: 2.5rem;
 }
 
 .button {
-  --stack-gap: clamp(2rem, 2.083vw + 1rem, 2.875rem);
+  --stack-gap: 1rem;
   border: none;
   display: block;
   inline-size: 100%;
@@ -253,25 +154,26 @@ article {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
+  text-decoration: none;
   cursor: pointer;
 }
 
-.button__dark {
+.button--dark {
   background: var(--clr-neutral-900);
   color: var(--clr-neutral-100);
 }
 
-.button__dark:hover,
-.button__dark:focus {
+.button--dark:hover,
+.button--dark:focus {
   background: var(--clr-primary);
 }
 
-.button__light {
+.button--light {
   background: var(--clr-neutral-100);
   color: var(--clr-neutral-900);
 }
-.button__light:hover,
-.button__light:focus {
+.button--light:hover,
+.button--light:focus {
   background: var(--clr-tertiary);
 }
 
@@ -285,16 +187,27 @@ article {
 ==============================*/
 
 .footer {
-  width: 100%;
+  inline-size: 100%;
   flex-wrap: wrap;
   display: inline-flex;
   justify-content: space-between;
-  margin-block-start: calc(clamp(5.625rem, 9.043vw + 2.799rem, 10.938rem) + clamp(4rem, 5.852vw + 2.628rem, 5.438rem));
+  margin-block-start: 12.5rem;
   padding-inline: clamp(0rem, -6.107vw + 2.931rem, 1.5rem);
+  gap: 2rem;
 }
 
-.logo-footer {
-  align-self: start;
+.footer__logo {
+  flex: 1 0 9.125rem;
+}
+
+.footer__content {
+  flex: 1 1 35rem;
+  justify-self: end;
+  display: flex;
+  flex-wrap: wrap;
+  inline-size: 100%;
+  justify-content: space-between;
+  gap: 4rem;
 }
 
 .footer-body {
@@ -305,7 +218,6 @@ article {
   display: flex;
   gap: 1.25rem;
   align-self: center;
-  justify-self: end;
 }
 
 .icon-socials {
@@ -322,52 +234,36 @@ article {
 ==============================*/
 
 @media (max-width: 767px) {
-  
+  /* Center background image */
   main {
     background-position: center 0;
   }
-  
-  .wrapper {
-    margin-inline: clamp(0rem, 9.16vw + -2.147rem, 2.25rem);
-  }
-  
+
+  /* Make bottom card take up 100% of the container and reset positioning as we switch to vertical layout */
   .card {
-   position: relative;
-   top: 0;
-   right: 0;
-   max-inline-size: 100%;
+    position: relative;
+    top: 0;
+    right: 0;
+    max-inline-size: 100%;
   }
-  
+
+  /* Centre the app screenshot now that we've moved to a vertical layout */
   .app-screenshot {
     margin-inline: auto;
-    }
-    
+  }
+
+  /* Reduces the margin on the footer to compensate for the fact that the orange card is no longer overflowing its parent at this screensize */
   .footer {
     margin-block-start: clamp(4rem, 5.852vw + 2.628rem, 5.438rem);
   }
- 
- .logo-footer {
-   margin-block-end: 2rem;
- }
- 
 }
 
 @media (max-width: 600px) {
-  
+  /* Switches the background images */
   body {
-  background: 
-  url('../assets/bg-oval-top-right-1.png'), 
-  url('../assets/bg-oval-top-right-2.png');
-  background-position: 
-  top -104px right -74.6px, 
-  top 95px right -74.6px;
-  background-repeat: no-repeat;
-  background-size: 17.5rem;
-  }
-
-  
-  .footer-socials {
-    justify-self: start;
-    margin-block-start: 4rem;
+    background: url("../assets/bg-oval-top-right-1.png"), url("../assets/bg-oval-top-right-2.png");
+    background-position: top -104px right -74.6px, top 95px right -74.6px;
+    background-repeat: no-repeat;
+    background-size: 17.5rem;
   }
 }
