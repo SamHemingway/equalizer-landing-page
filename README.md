@@ -1,6 +1,6 @@
 # Frontend Mentor - Equalizer landing page solution
 
-This is a solution to the [Equalizer landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/equalizer-landing-page-7VJ4gp3DE). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Equalizer landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/equalizer-landing-page-7VJ4gp3DE). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -15,6 +15,7 @@ This is a solution to the [Equalizer landing page challenge on Frontend Mentor](
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Acknowledgements](#acknowledgements)
 
 ## Overview
 
@@ -46,21 +47,21 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 
 ### What I learned
 
 - It is very difficult to take layouts that don't follow a coherent design system and force them into one. At first, I attempted to use concepts from Every Layout to build this design, but it became clear that this was a herculean task given that the design wasn't built with these kinds of components in mind.
-- Building sites via explicit media queries to change layout is much less time consuming than building something truly responsive. Admittedly, I wouldn't have had to build *so many* clamp declarations in my CSS if the design had consistent padding/heading size changes. On the subject of clamp...
+- Building sites via explicit media queries to change layout is much less time consuming than building something truly responsive. Admittedly, I wouldn't have had to build _so many_ clamp declarations in my CSS if the design had consistent padding/heading size changes. On the subject of clamp...
 - I had to dust off my maths to figure out how to use linear interpolation to dynamically change, for example, the size of `h1` tag between desktop and mobile sizes. Whilst I'm confident there's a way to implement this without resorting to magic numbers for the clamp declarations which litter my CSS doc, my attempts ended in failure and as such I used a website (linked in [Useful resources](#useful-resources)) to generate these for me.
 - Sometimes, you've got to throw away the resources provided by Frontend Mentor and rebuild it yourself to make something work. In this example, the background image was provided as one large image for each viewport size (so one image for desktop, one for tablet, one for mobile). This was very unwieldy to make work as the background image elements required specific sizing and positioning at each provided viewport. Therefore, I ended up exporting each background image element individually from Figma and then implemented each `png` separately rather than all in one go.
-- That I'm not currently capable of achieving this kind of layout without using media queries. I spent a lot of time trying to make certain elements (such as the app screenshot and card in the main element that need to overlap, as well as the footer) work with just native flexbox/grid but I couldn't find a way to make it work.
-- How to use the `svg` tag for svg images so that I can change their values using CSS (an example of this is the hover effect on the social icons in the footer).
+- That a seemingly difficult Flexbox implementation is actually really simple if you just nest Flexbox items. I spent so long trying to get the footer element to work as one Flexbox item, before realising I could just implement it as 2 nested Flexbox elements and solved it in about 5 minutes...
+- That, as much as I had best intentions around trying to achieve this design without media queries, there are certain things that simply require it, and that's okay 😀
+- How to use inline svgs so that I can change their values using CSS (an example of this is the hover effect on the social icons in the footer), as well as generally how to edit them to make them accessible so they scale with user zoom on the browser.
+- That you can't nest a `button` tag inside of an `a` tag. Instead, just style the `a` tag!
 
 ### Continued development
 
 - Try to implement linear interpolation via CSS variables rather than magic numbers in future designs.
-- Try to implement elements such as those I required media queries for via pure flexbox/grid in the future.
 
 ### Useful resources
 
@@ -72,3 +73,7 @@ Users should be able to:
 
 - Website - [Sam Hemingway](https://samhemingway.dev)
 - Frontend Mentor - [@SamHemingway](https://www.frontendmentor.io/profile/samhemingway)
+
+## Acknowledgements
+
+- Thanks to [@faruking](https://www.frontendmentor.io/profile/faruking) on FEM who got me thinking about different ways to approach the footer! Whilst I didn't go with their solution, it was their idea that made me realise that I could just nest Flexboxes to implement with a defined `flex-basis` for each element to achieve the design in a graceful way.
